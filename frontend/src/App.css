@@ -1,0 +1,25 @@
+.navbar {
+  background-color: #1e293b;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navbar button {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background: #3b82f6;
+}
+
+.container {
+  padding: 25px;
+}

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Medicine</title>
+        <style>
+            nav ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                gap: 20px;
+                background-color: #333;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 15px;
+                display: block;
+            }
+            nav a:hover {
+                background-color: #555;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav>
+           <ul>
+             <li><a href="#">Batch</a></li>
+            <li><a href="#">Supplier</a></li>
+            <li><a href="#">Medicine</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Transaction</a></li>
+           </ul>
+        </nav>
+        <main>
+            <section id="batch" style="display:none;">
+                <h2>Batch Management</h2>
+                <p>Manage medicine batches here.</p>
+            </section>
+            
+            <section id="supplier" style="display:none;">
+                <h2>Supplier Management</h2>
+                <p>Manage suppliers here.</p>
+            </section>
+            
+            <section id="medicine" style="display:none;">
+                <h2>Medicine Management</h2>
+                <p>Manage medicines here.</p>
+            </section>
+            
+            <section id="staff" style="display:none;">
+                <h2>Staff Management</h2>
+                <p>Manage staff here.</p>
+            </section>
+            
+            <section id="transaction" style="display:none;">
+                <h2>Transaction Management</h2>
+                <p>Manage transactions here.</p>
+            </section>
+        </main>
+
+        <script>
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelectorAll('main section').forEach(s => s.style.display = 'none');
+                    const page = link.textContent.toLowerCase();
+                    document.getElementById(page).style.display = 'block';
+                });
+            });
+            document.getElementById('batch').style.display = 'block';
+        </script>
+    </body>
+</html>
